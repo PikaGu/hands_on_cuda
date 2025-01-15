@@ -1,7 +1,4 @@
 import numpy as np
-
-import sys
-sys.path.append('./build')
 import cuda_demo
 
 # Generate random data
