@@ -4,11 +4,11 @@ project(CudaDemo LANGUAGES CXX CUDA)
 add_subdirectory(external/pybind11)
 
 set(PYBIND11_FINDPYTHON ON)
-find_package(pybind11 CONFIG)
 find_package(CUDAToolkit REQUIRED)
 
 # CUDA configuration
 # set(CMAKE_CUDA_STANDARD 14)
+set(CMAKE_CUDA_ARCHITECTURES native)
 
 set(KERNEL_SRC_DIR "${PROJECT_SOURCE_DIR}/src/kernel")
 file(GLOB KERNEL_CU_FILES "${KERNEL_SRC_DIR}/*.cu")
