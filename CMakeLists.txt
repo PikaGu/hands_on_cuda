@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(CudaDemo LANGUAGES CXX CUDA)
 
+add_subdirectory(external/pybind11)
+
 set(PYBIND11_FINDPYTHON ON)
 find_package(pybind11 CONFIG)
 find_package(CUDAToolkit REQUIRED)
