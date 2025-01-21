@@ -12,11 +12,11 @@ void random_fill(float *data, int size) {
 
 
 int main() {
-    const int N = 10;
+    const int N = 1 << 12;
     float* A = new float[N];
     float* B = new float[N];
     float* C = new float[N];
-    
+
     std::srand(std::time(nullptr));
     random_fill(A, N);
     random_fill(B, N);
